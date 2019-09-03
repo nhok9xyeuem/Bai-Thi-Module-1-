@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hinh Chu Nhat</title>
+</head>
+<body>
+<canvas id="mycanvas" width="1368" height="768" style="border:5px ; solid-color: crimson"></canvas>
+
+<script>
+    let Rectangle = function (x, y, width, height) {
+        this.x = x;
+        this.y = y;
+        this.width = width;
+        this.height = height;
+        this.render = function () {
+            let ctx = document.getElementById('mycanvas').getContext('2d');
+            ctx.beginPath();
+            ctx.fillStyle = "#000000";
+            ctx.fillRect(this.x, this.y, this.width, this.height);
+        }
+    };
+    let rectangle = new Rectangle(10, 10, 200, 100);
+    rectangle.render();
+
+</script>
+</body>
+</html>

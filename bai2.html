@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    let array1 = [12, 6, 3, 7, 21, 5, 7];
+    let array2 = [12, 6, 3, 7, 21, 5, 7];
+    let array3 = [12, 6, 3, 7, 21, 5, 7];
+    let array4 = [12, 6, 3, 4, 21, 5, 7];
+
+    function tryRemoveFromArray(array, index) {
+        for (let i = 0; i < array.length; i++) {
+            if (index === array[i]) {
+                array.splice(i, 1);
+            }
+        }
+        document.write(array + '<br>');
+        return array;
+    }
+
+    tryRemoveFromArray(array1, 2);
+    tryRemoveFromArray(array2, 12);
+    tryRemoveFromArray(array3, 7);
+    tryRemoveFromArray(array4, 7);
+
+
+</script>
+</body>
+</html>
